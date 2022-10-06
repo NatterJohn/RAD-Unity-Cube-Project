@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PhysicsScript : MonoBehaviour
 {
+    private const int Damage = 3;
     Rigidbody ourRigidBody;
 
     // Start is called before the first frame update
@@ -23,8 +24,19 @@ public class PhysicsScript : MonoBehaviour
     }
 
 
+    
     private void OnCollisionEnter(Collision collision)
     {
-        collision.transform.position += Vector3.down;
+     Health objectHitHealth =   collision.gameObject.GetComponent<Health>();
+
+        if (objectHitHealth)
+        {
+            print("Found Health scipt in object hit");
+            objectHitHealth.takeDamage(3);
+        }
+        else
+        {
+            print("Didn't find Health script in object hit");
+        }
     }
 }
