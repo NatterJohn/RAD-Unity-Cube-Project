@@ -16,7 +16,7 @@ public class PhysicsScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.CapsLock))
          {
              ourRigidBody.AddExplosionForce(1000,transform.position+Vector3.down,2);
          }
