@@ -5,6 +5,7 @@ using UnityEngine;
 public class CubeControl : MonoBehaviour
 {
     private float turningSpeed = 180;
+    private float walkingSpeed = 3;
     public Transform cubeTemplate;
     // Start is called before the first frame update
     void Start()
@@ -16,16 +17,16 @@ public class CubeControl : MonoBehaviour
     void Update()
     {
         if (Input.GetKey(KeyCode.W))
-        transform.position += transform.forward * Time.deltaTime;
+        transform.position += walkingSpeed*transform.forward * Time.deltaTime;
 
         if (Input.GetKey(KeyCode.S))
-        transform.position -= transform.forward * Time.deltaTime;
+        transform.position -= walkingSpeed * transform.forward * Time.deltaTime;
 
         if (Input.GetKey(KeyCode.A))
-        transform.position -= transform.right * Time.deltaTime;
+        transform.position -= walkingSpeed * transform.right * Time.deltaTime;
 
         if (Input.GetKey(KeyCode.D))
-        transform.position += transform.right * Time.deltaTime;
+        transform.position += walkingSpeed * transform.right * Time.deltaTime;
 
         if (Input.GetKey(KeyCode.RightShift))
         transform.position += transform.up * Time.deltaTime;
