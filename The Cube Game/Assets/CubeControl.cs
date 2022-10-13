@@ -45,10 +45,6 @@ public class CubeControl : MonoBehaviour
         if (Input.GetKey(KeyCode.DownArrow))
         transform.Rotate(transform.right, turningSpeed * Time.deltaTime);
 
-        if (Input.GetKey(KeyCode.Space))
-            Instantiate(cubeTemplate, 
-                                transform.position - transform.forward,
-                                Quaternion.identity);
 
     }
 }

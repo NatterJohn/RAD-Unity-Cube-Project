@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PhysicsScript : MonoBehaviour
 {
-    private const int Damage = 3;
+    private const int Damage = 1;
     Rigidbody ourRigidBody;
 
     // Start is called before the first frame update
@@ -16,9 +16,9 @@ public class PhysicsScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.CapsLock))
+        if (Input.GetKeyDown(KeyCode.Space))
          {
-             ourRigidBody.AddExplosionForce(1000,transform.position+Vector3.down,2);
+             ourRigidBody.AddExplosionForce(500,transform.position+Vector3.down,2);
          }
         
     }
@@ -32,7 +32,7 @@ public class PhysicsScript : MonoBehaviour
         if (objectHitHealth)
         {
             print("Found Health scipt in object hit");
-            objectHitHealth.takeDamage(3);
+            objectHitHealth.takeDamage(1);
         }
         else
         {
