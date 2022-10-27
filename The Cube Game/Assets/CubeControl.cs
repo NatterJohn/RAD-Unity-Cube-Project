@@ -5,7 +5,7 @@ using UnityEngine;
 public class CubeControl : MonoBehaviour
 {
     private float turningSpeed = 180;
-    private float walkingSpeed = 3;
+    private float walkingSpeed = 5;
     public Transform cubeTemplate;
     // Start is called before the first frame update
     void Start()

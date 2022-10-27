@@ -18,7 +18,7 @@ public class PhysicsScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
          {
-             ourRigidBody.AddExplosionForce(500,transform.position+Vector3.down,2);
+             ourRigidBody.AddExplosionForce(0,transform.position+Vector3.down,0);
          }
         
     }
